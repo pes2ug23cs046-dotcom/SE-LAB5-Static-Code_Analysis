@@ -1,15 +1,18 @@
 1.Which issues were the easiest to fix, and which were the hardest? Why?
-Adding docstring to functions and modules and renaming functions to snake-case were the easiest and changing the eval function to act.literal_eval was the hardest
+Adding docstring to functions and modules and renaming functions to snake-case were the easiest and changing the global variable was the hardest as the the variable was reference at various places and so many functions had to be rewritten by passing a parameter instead of using the global variable directly
 
 
 2.Did the static analysis tools report any false positives? If so, describe one example.
 inventory_system.py:31:4: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
 inventory_system.py:43:8: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-The static analysis tool pylint says to use a lazy evaluation function inside loggin instead of using an f string though this doesnt affect the quality of code
+The static analysis tool pylint says to use a lazy evaluation function inside logging instead of using an f string though this doesnt affect the quality of code
 
 
 3.How would you integrate static analysis tools into your actual software development workflow? Consider continuous integration (CI) or local development practices.
-Automation in CI pipeline could be done using GitHub,jenkins and github actions where we configure yaml and the static analysis tools start running automatically on pushing code into a repo or upon a pull request
+
+Automation in Continuous Integration (CI) pipelines enhances the software development process by ensuring that code is automatically built, tested, and analyzed whenever changes are made to a repository. Tools such as GitHub, Jenkins, and GitHub Actions support this automation through workflow configurations defined in YAML files or Jenkinsfiles.
+When new code is pushed or a pull request is created, these workflows are triggered to perform tasks such as building the project, executing automated tests, and running static code analysis using tools like SonarQube, ESLint, or Pylint. The analysis results are then reported back to the repository, enabling to identify and address potential issues early in the development cycle.
+Overall, this automation improves code quality, reduces integration errors, and promotes consistency and efficiency throughout the software development lifecycle.
 
 
 4.What tangible improvements did you observe in the code quality, readability, or potential robustness after applying the fixes
