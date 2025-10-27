@@ -1,7 +1,4 @@
-************* Module inventory_system
-inventory_system.py:31:4: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
-inventory_system.py:43:8: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
 
-------------------------------------------------------------------
-Your code has been rated at 9.66/10 (previous run: 9.48/10, +0.17)
+-------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 9.66/10, +0.34)
 
